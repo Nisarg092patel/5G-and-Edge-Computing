@@ -50,51 +50,18 @@ Ensure the following prerequisites are met:
 ```bash
 git clone https://github.com/IIITV-5G-and-Edge-Computing-Activity/5G-Edge-Drive.git
 cd 5G-Edge-Drive-master
-2. Install Dependencies
-bash
-Copy code
+
+# 2. Install Dependencies
 pip install -r requirements.txt
-3. Generate gRPC Files
-Run the following command to generate the gRPC client and server code:
 
-bash
-Copy code
+# 3. Generate gRPC Files
 python -m grpc_tools.protoc -I. --python_out=. --grpc_python_out=. vehicle_edge.proto
-4. Start the Edge Server
-Run the edge server to handle incoming requests:
 
-bash
-Copy code
+# 4. Start the Edge Server
 python edge_server.py
-5. Run the Vehicle Simulation
-Simulate the vehicle sending data to the edge server:
 
-bash
-Copy code
+# 5. Run the Vehicle Simulation
 python vehicle.py
-File Structure
-vehicle.py: Simulates the vehicle capturing images and sending requests to the edge server.
-edge_server.py: Handles object detection and route planning requests.
-route_planning.py: Implements the A* algorithm for navigation.
-vehicle_edge.proto: Defines the gRPC communication schema.
-Future Work
-Integration with CARLA Simulator: Test the system in realistic driving environments.
-Docker Deployment: Package components into Docker containers for scalability.
-References
-YOLOv5 Documentation
-gRPC Documentation
-A* Algorithm Overview
-CARLA Simulator
-Docker Documentation
-Contributors
-Arkesh Choudhury 202111012
-Nisarg Patel 202111058
-Rajan Yadav 202111068
-Sahil Sonkar 202111075
-Saurya Gupta 202111076
-vbnet
-Copy code
 
-You can copy and paste this entire markdown code into your GitHub repository's `README.md` file. It contains the project overview, installation steps, features, system components, and additional resources.
 
 
